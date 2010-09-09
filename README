@@ -1,0 +1,5 @@
+About:
+I'm a pilot, but i'm also frugal. I found myself constantly searching 100LL.com for all airports within my flightpath for the cheapest avgas. Since I love using navmonster.com for trip planning, I wrote this chrome extension to automatically grab all 100ll.com fuel prices for every airport near my flightpath.
+
+How to use:
+Load in the extension into chrome, you may need to enable developer mode since it's not exported to .pem. Plan a trip on navmonster.com between two airports. In the left hand column you'll see all the airports on your flightpath update fuel prices from 100ll.com
