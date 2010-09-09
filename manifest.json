@@ -1,0 +1,15 @@
+{
+	"name": "fuelMonster",
+	"version" : "0.1",
+	"description" : "Finds avgas prices for airports around the selected route on the amazing site navmonster.com",
+	"background_page" : "background.html",
+	"permissions" : [
+		"http://*.airnav.com/airport/*"
+	],
+	"content_scripts": [
+	{
+		"matches": ["http://*.navmonster.com/map/*"],
+		"js": ["navmonster.js"]
+	}
+	]
+}

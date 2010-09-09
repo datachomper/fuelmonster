@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<script>
+			function fetchFuel(id, callback) {
+				var xhr = new XMLHttpRequest();
+				xhr.onreadystatechange = function(data) {
+					if (xhr.readyState == 4) {
+						if (xhr.status == 200) {
+							callback([id, xhr]);
+						} else {
+							callback([null, null]);
+						}
+					}
+				}
+				var url = 'http://airnav.com/airport/'+id;
+				xhr.open('GET', url, true);
+				xhr.send();
+			};
+
+			function onRequest(request, sender, callback) {
+				if (request.action == 'fetchFuel') {
+					fetchFuel(request.id, callback);
+				}
+			};
+
+			chrome.extension.onRequest.addListener(onRequest);
+		</script>
+	</body>
+</html>
